@@ -113,7 +113,7 @@
 		"@types/mocha": "^8.2.3",
 		"@types/mock-require": "^2.0.1",
 		"@types/moment-timezone": "^0.5.30",
-		"@types/mongodb": "^3.6.10",
+		"@types/mongodb": "^4.0.7",
 		"@types/node": "^14.18.15",
 		"@types/node-rsa": "^1.1.1",
 		"@types/nodemailer": "^6.4.4",
