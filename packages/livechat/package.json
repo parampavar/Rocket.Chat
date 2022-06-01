@@ -69,7 +69,7 @@
 		"react-dom": "^18.1.0",
 		"rimraf": "^3.0.2",
 		"sass": "^1.49.10",
-		"sass-loader": "^9.0.2",
+		"sass-loader": "^13.0.0",
 		"serve": "^11.3.2",
 		"style-loader": "^1.2.1",
 		"stylelint": "^13.6.1",
