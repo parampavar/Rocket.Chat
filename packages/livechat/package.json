@@ -99,7 +99,7 @@
 		"mem": "^6.1.1",
 		"mitt": "^2.1.0",
 		"preact": "^10.8.2",
-		"preact-router": "^3.2.1",
+		"preact-router": "^4.1.0",
 		"query-string": "^7.1.1",
 		"react-i18next": "^11.16.9",
 		"whatwg-fetch": "^3.6.2"
