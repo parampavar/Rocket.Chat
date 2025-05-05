@@ -51,7 +51,7 @@
 		"eslint-plugin-react": "^7.31.11",
 		"eslint-plugin-react-hooks": "^4.6.0",
 		"file-loader": "^6.2.0",
-		"gh-release": "^3.5.0",
+		"gh-release": "^6.0.4",
 		"html-webpack-plugin": "^4.4.1",
 		"husky": "^4.3.8",
 		"if-env": "^1.0.4",
