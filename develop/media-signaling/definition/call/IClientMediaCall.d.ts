@@ -28,6 +28,8 @@ export interface IClientMediaCall {
     held: boolean;
     busy: boolean;
     contact: CallContact;
+    audioLevel: number;
+    localAudioLevel: number;
     emitter: Emitter<CallEvents>;
     getRemoteMediaStream(): MediaStream;
     accept(): void;
@@ -40,5 +42,6 @@ export interface IClientMediaCall {
         id: string;
     }): void;
     sendDTMF(dtmf: string, duration?: number): void;
+    getStats(selector?: MediaStreamTrack | null): Promise<RTCStatsReport | null>;
 }
 //# sourceMappingURL=IClientMediaCall.d.ts.map

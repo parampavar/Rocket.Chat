@@ -66,6 +66,14 @@ export class ClientMediaCall {
     get busy() {
         return !this.isPendingAcceptance() && !this.isOver();
     }
+    get audioLevel() {
+        var _a;
+        return ((_a = this.webrtcProcessor) === null || _a === void 0 ? void 0 : _a.audioLevel) || 0;
+    }
+    get localAudioLevel() {
+        var _a;
+        return ((_a = this.webrtcProcessor) === null || _a === void 0 ? void 0 : _a.localAudioLevel) || 0;
+    }
     constructor(config, callId, { inputTrack } = {}) {
         this.config = config;
         this.webrtcProcessor = null;
@@ -469,6 +477,12 @@ export class ClientMediaCall {
         this.config.transporter.sendToServer(this.callId, 'dtmf', {
             dtmf,
             duration,
+        });
+    }
+    getStats(selector) {
+        return __awaiter(this, void 0, void 0, function* () {
+            var _a, _b;
+            return (_b = (_a = this.webrtcProcessor) === null || _a === void 0 ? void 0 : _a.getStats(selector)) !== null && _b !== void 0 ? _b : null;
         });
     }
     changeState(newState) {

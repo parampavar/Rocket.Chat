@@ -56,6 +56,8 @@ export declare class ClientMediaCall implements IClientMediaCall {
     private currentNegotiationId;
     private creationTimestamp;
     private pendingAnswerRequest;
+    get audioLevel(): number;
+    get localAudioLevel(): number;
     constructor(config: IClientMediaCallConfig, callId: string, { inputTrack }?: {
         inputTrack?: MediaStreamTrack | null;
     });
@@ -96,6 +98,7 @@ export declare class ClientMediaCall implements IClientMediaCall {
     setContractState(state: 'signed' | 'ignored'): void;
     reportStates(): void;
     sendDTMF(dtmf: string, duration?: number): void;
+    getStats(selector?: MediaStreamTrack | null): Promise<RTCStatsReport | null>;
     private changeState;
     private updateClientState;
     private maybeStopWebRTC;
