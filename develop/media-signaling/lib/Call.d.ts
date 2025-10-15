@@ -25,6 +25,8 @@ export declare class ClientMediaCall implements IClientMediaCall {
     get ignored(): boolean;
     private _contact;
     get contact(): CallContact;
+    private _transferredBy;
+    get transferredBy(): CallContact | null;
     private _service;
     get service(): CallService | null;
     get signed(): boolean;

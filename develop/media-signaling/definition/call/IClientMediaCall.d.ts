@@ -28,6 +28,7 @@ export interface IClientMediaCall {
     held: boolean;
     busy: boolean;
     contact: CallContact;
+    transferredBy: CallContact | null;
     audioLevel: number;
     localAudioLevel: number;
     emitter: Emitter<CallEvents>;

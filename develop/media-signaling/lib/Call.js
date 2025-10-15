@@ -40,6 +40,9 @@ export class ClientMediaCall {
     get contact() {
         return this._contact || {};
     }
+    get transferredBy() {
+        return this._transferredBy;
+    }
     get service() {
         return this._service;
     }
@@ -103,6 +106,7 @@ export class ClientMediaCall {
         this.oldClientState = 'none';
         this._ignored = false;
         this._contact = null;
+        this._transferredBy = null;
         this._service = null;
     }
     /**
@@ -161,6 +165,7 @@ export class ClientMediaCall {
             this.hasRemoteData = true;
             this._service = signal.service;
             this._role = signal.role;
+            this._transferredBy = signal.transferredBy || null;
             this.changeContact(signal.contact);
             if (this._role === 'caller' && !this.acceptedLocally) {
                 if (oldCall) {
