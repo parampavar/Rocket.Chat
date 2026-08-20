@@ -138,7 +138,6 @@ export declare class ClientMediaCall implements IClientMediaCall {
     private changeContact;
     protected processOfferRequest(signal: ServerMediaSignalRequestOffer): Promise<void>;
     protected shouldIgnoreWebRTC(): boolean;
-    protected processAnswerRequest(signal: ServerMediaSignalRemoteSDP): Promise<void>;
     protected sendError(error: Partial<ClientMediaSignalError>): void;
     protected processRemoteSDP(signal: ServerMediaSignalRemoteSDP): Promise<void>;
     protected deliverSdp(data: {
