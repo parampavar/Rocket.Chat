@@ -18,6 +18,7 @@ export const callHangupReasonList = [
     'timeout-remote-sdp', // Timeout waiting for the remote SDP
     'timeout-local-sdp', // Timeout while generating the local SDP + waiting for ICE Gathering
     'timeout-activation', // Timeout connecting to the negotiated session
+    'timeout-accepting', // Timeout waiting for server to acknowledge our acceptance
     'timeout', // The call state hasn't progressed for too long
     'signaling-error', // Hanging up because of an error during the signal processing
     'service-error', // Hanging up because of an error setting up the service connection
@@ -27,6 +28,7 @@ export const callHangupReasonList = [
     'unknown', // One of the call's signed users reported they don't know this call
     'another-client', // One of the call's users requested a hangup from a different client session than the one where the call is happening
 ];
+export const isCallHangupReason = (reason) => callHangupReasonList.includes(reason);
 export const callAnswerList = [
     'accept', // actor accepts the call
     'reject', // actor rejects the call

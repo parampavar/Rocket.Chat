@@ -74,6 +74,7 @@ export declare class ClientMediaCall implements IClientMediaCall {
     private sentLocalSdp;
     private receivedRemoteSdp;
     private enabledFeatures;
+    private hangupReason;
     private _flags;
     get flags(): CallFlag[];
     get features(): CallFeature[];
@@ -131,6 +132,7 @@ export declare class ClientMediaCall implements IClientMediaCall {
     getStats(selector?: MediaStreamTrack | null): Promise<RTCStatsReport | null>;
     isFeatureAvailable(feature: CallFeature): boolean;
     hasFlag(flag: CallFlag): boolean;
+    shouldSkipDroppedEvent(): boolean;
     private canChangeToState;
     private changeState;
     private updateClientState;
@@ -151,6 +153,7 @@ export declare class ClientMediaCall implements IClientMediaCall {
     private processNotification;
     private flagAsAccepted;
     private flagAsEnded;
+    private setHangupState;
     private addStateTimeout;
     private getTimeoutHangupReason;
     private resetStateTimeouts;
