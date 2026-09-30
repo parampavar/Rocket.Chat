@@ -43,7 +43,7 @@
 		"i18next": "~26.4.2",
 		"mem": "^8.1.1",
 		"path-to-regexp": "^6.3.0",
-		"preact": "~10.25.4",
+		"preact": "~10.29.8",
 		"preact-render-to-string": "~6.7.0",
 		"preact-router": "^4.1.2",
 		"query-string": "^7.1.3",
